@@ -1,9 +1,9 @@
-EX 42 C program to write a fuctions to perform push,pop,display,peek in stack using array.
-DATE:23/05/2025
-AIM:
+# EX 42 C program to write a fuctions to perform push,pop,display,peek in stack using array.
+## DATE:23/05/2025
+## AIM:
 To write a fuctions to perform push,pop,display,peek in stack using array.
 
-Algorithm
+## Algorithm
 1.Start the program and declare a stack array and a variable top initialized to -1.
 
 2.Define push() to insert an element into the stack if it is not full.
@@ -14,7 +14,8 @@ Algorithm
 
 5.Define display() to print all stack elements from top to bottom.
 
-Program:
+## Program:
+```
 /*
 C program to write a fuctions to perform push,pop,display,peek in stack using array.
 Developed by: Elamaran N
@@ -98,8 +99,12 @@ int main()
 }
 
 
-Output:
-image
+```
 
-Result:
+## Output:
+
+![image](https://github.com/user-attachments/assets/4831e776-f2b9-4fae-abba-04e8a51f5f28)
+
+
+## Result:
 Thus the program was executed and the output was verified successfully.
