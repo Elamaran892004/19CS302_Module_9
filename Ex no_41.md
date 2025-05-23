@@ -1,22 +1,22 @@
-# EX 41 C program to write a function to find the peek of stack using array.
-## DATE:23/05/2025
-## AIM:
-To write a function to find the peek of stack using array.
+EX 42 C program to write a fuctions to perform push,pop,display,peek in stack using array.
+DATE:23/05/2025
+AIM:
+To write a fuctions to perform push,pop,display,peek in stack using array.
 
-## Algorithm
-1.Start the program and declare an array to implement the stack.
+Algorithm
+1.Start the program and declare a stack array and a variable top initialized to -1.
 
-2.Define a function peek to return the top element of the stack.
+2.Define push() to insert an element into the stack if it is not full.
 
-3.Check if the stack is empty before accessing the top element.
+3.Define pop() to remove the top element from the stack if it is not empty.
 
-4.If the stack is empty, return a suitable message or value indicating an empty stack.
+4.Define peek() to return the topmost element without removing it.
 
-5.End the program.
-## Program:
-```
+5.Define display() to print all stack elements from top to bottom.
+
+Program:
 /*
-C program to write a function to find the peek of stack using array.
+C program to write a fuctions to perform push,pop,display,peek in stack using array.
 Developed by: Elamaran N
 RegisterNumber:  212222040041
 */
@@ -31,10 +31,23 @@ void push(int value)
     if(top < MAX - 1)
     {
         stack[++top] = value;
+        printf("%d pushed to stack\n", value);
     }
     else
     {
         printf("Stack overflow\n");
+    }
+}
+
+void pop()
+{
+    if(top >= 0)
+    {
+        printf("%d popped from stack\n", stack[top--]);
+    }
+    else
+    {
+        printf("Stack underflow\n");
     }
 }
 
@@ -47,7 +60,24 @@ int peek()
     else
     {
         printf("Stack is empty\n");
-        return -1;  // Returning -1 to indicate empty stack
+        return -1;
+    }
+}
+
+void display()
+{
+    if(top >= 0)
+    {
+        printf("Stack elements: ");
+        for(int i = top; i >= 0; i--)
+        {
+            printf("%d ", stack[i]);
+        }
+        printf("\n");
+    }
+    else
+    {
+        printf("Stack is empty\n");
     }
 }
 
@@ -57,18 +87,19 @@ int main()
     push(20);
     push(30);
 
-    printf("Top of the stack: %d\n", peek());
+    display();
+
+    printf("Top element: %d\n", peek());
+
+    pop();
+    display();
 
     return 0;
 }
 
 
-```
+Output:
+image
 
-## Output:
-
-![image](https://github.com/user-attachments/assets/28a2ee02-1a3c-4681-890a-80124d8b08ed)
-
-
-## Result:
+Result:
 Thus the program was executed and the output was verified successfully.
